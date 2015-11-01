@@ -1,0 +1,56 @@
+<div class ='container'>
+	<h1>{{title}}</h1>
+	<div class='row'>
+		<div class="col-md-3">
+			<img ng-src="http://image.tmdb.org/t/p/w370/{{movie.poster_path}}" class='img-responsive'>
+		</div>
+		<div class="col-md-7">
+			<h1 class="">{{movie.title}}</h1>
+			<p>Rating:{{movie.vote_average}}({{movie.vote_count}})</p>
+			<p>{{movie.overview}}</p>
+			<h3>TagLine</h3>
+			<p>{{movie.tagline}}</p>
+			<p class=""style="color:black">Released:{{movie.release_date|date:'mediumDate'}}</p>
+		</div>
+
+	</div><br/><br/>
+
+	<hr />
+	<div class='row'>
+		<div class='col-md-8'>
+			<p>{{ rotten.Actors }}</p>
+			<p>{{ rotten.tomatoConsensus }}</p>
+			<p>{{ rotten.imdbVotes }}</p>
+			<br/><br/>
+		</div>
+		<div class='col-md-2'>
+           <!-- <button class='btn btn-primary' ng-show='trailer'   ng-click="trailer=false">Hide Trailer</button>
+            <button class='btn btn-primary' ng-show='!trailer'  ng-click="trailer=true">Show Trailer</button>-->
+            <button class='btn btn-primary' ng-click="showTrailer()">Show Trailer</button>
+    	</div>
+	</div> 
+	<a href="#/popular"><button class="btn btn-primary">Return Movies</button></a>
+</div>
+<div id="myModal" class="modal fade {{fadeIn}}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" ng-click="closeModal()" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Movie Trailer</h4>
+            </div>
+            <div class="modal-body">
+              <div class='container-fluid'>
+                <div class="row">                   
+                   <div class="col-md-12">
+                  <iframe  src="{{trailerSrc}}" width="560" height='315' allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" frameborder="no" scrolling="no" autoplay="false"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" ng-click="closeModal()">Close</button>
+                
+            </div>
+        </div>
+    </div>
+</div>

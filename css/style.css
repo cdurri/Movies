@@ -1,0 +1,33 @@
+ 
+div.repeat:nth-child(6n+0):after { display: table; content: " "; clear: both }
+
+
+.homePage p {
+
+	font-size: 2em;
+
+}
+
+.homePage a {
+
+	font-size: 2em;
+
+}
+
+a {
+
+	text-decoration: none;
+}
+.fade.in { opacity:1; display:block; overflow-x: hidden;overflow-y: auto;}
+.fade.out { display:none;}
+
+.modal-dialog .container-fluid {
+    padding-right: 0px; 
+    padding-left: 0px; 
+}
+
+
+
+
+	
+
