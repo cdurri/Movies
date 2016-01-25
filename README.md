@@ -1,8 +1,5 @@
 # mdb-nav
 
-This project is a version of a student project used for
-learning the AngularJS frame work.
-
 It uses the MoviesDB Api as its basis see http://docs.themoviedb.apiary.io/#
 
 To clone the application use the usual git clone command from a command tool
